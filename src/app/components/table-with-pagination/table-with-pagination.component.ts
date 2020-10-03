@@ -9,9 +9,7 @@ import { FetchDataService } from 'src/app/services/fetch-data.service';
 export class TableWithPaginationComponent implements OnInit {  
 
   title = 'datatables';
-
   dtOptions: DataTables.Settings = {};
-
   posts;
 
  
@@ -22,10 +20,10 @@ export class TableWithPaginationComponent implements OnInit {
     this.dtOptions = {
 
       pagingType: 'full_numbers',
-
       pageLength: 5,
-
-      processing: true
+      processing: true,
+      deferRender: true,
+      retrieve: true
 
     };
   }
